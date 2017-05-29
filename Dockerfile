@@ -30,7 +30,7 @@ RUN apt-get update \
 
 RUN mkdir -p /opt/nordic \
 		&& wget https://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v12.x.x/nRF5_SDK_12.2.0_f012efa.zip -O nordic_sdk.zip \
-		&& unzip nordic_sdk.zip 'components/*' 'external/*' 'svd/*' -d $SDK_ROOT \
+		&& unzip nordic_sdk.zip 'components/*' 'external/*' 'examples/*' 'svd/*' -d $SDK_ROOT \
 		&& rm nordic_sdk.zip
 
 COPY Makefile.posix $SDK_ROOT/components/toolchain/gcc/Makefile.posix
